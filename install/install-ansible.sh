@@ -6,15 +6,15 @@
 # export HTTP_PROXY=http://proxy.example.com/
 # export HTTPS_PROXY=http://proxy.example.com:443/
 #
-# sudo bash -c "cat << EOF > /etc/apt/apt.conf
+# bash -c "cat << EOF > /etc/apt/apt.conf
 # Acquire::http::Proxy \"$HTTP_PROXY\";
 # Acquire::https::Proxy \"$HTTPS_PROXY\";
 # EOF"
 
-sudo apt-get update
-sudo apt-get -y dist-upgrade
-sudo apt-get -y install software-properties-common
-sudo -E apt-add-repository -y ppa:ansible/ansible
-sudo apt-get update
-sudo apt-get install -y ansible python-pip 
-sudo pip install pywinrm
+apt-get update
+apt-get -y dist-upgrade
+apt-get -y install software-properties-common
+apt-add-repository -y ppa:ansible/ansible
+apt-get update
+apt-get install -y ansible python-pip 
+pip install pywinrm
