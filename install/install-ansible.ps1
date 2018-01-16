@@ -1,0 +1,1 @@
+wsl /bin/bash install-ansible.sh
